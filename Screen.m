@@ -19,7 +19,8 @@
     BOOL isDir;
     if (!([fm fileExistsAtPath: p isDirectory: &isDir] && isDir))
         return [NSArray array];
-    
+
+	
     NSArray * files = [fm contentsOfDirectoryAtPath: p error: NULL];
     
     NSPredicate * pngPredicate = [NSPredicate predicateWithFormat:@"SELF ENDSWITH '.png'"];
